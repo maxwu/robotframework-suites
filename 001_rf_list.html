@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+<head>
+  <title></title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <style type="text/css">
+td.linenos { background-color: #f0f0f0; padding-right: 10px; }
+span.lineno { background-color: #f0f0f0; padding: 0 5px 0 5px; }
+pre { line-height: 125%; }
+body .hll { background-color: #ffffcc }
+body  { background: #f8f8f8; }
+body .c { color: #408080; font-style: italic } /* Comment */
+body .err { border: 1px solid #FF0000 } /* Error */
+body .k { color: #008000; font-weight: bold } /* Keyword */
+body .o { color: #666666 } /* Operator */
+body .ch { color: #408080; font-style: italic } /* Comment.Hashbang */
+body .cm { color: #408080; font-style: italic } /* Comment.Multiline */
+body .cp { color: #BC7A00 } /* Comment.Preproc */
+body .cpf { color: #408080; font-style: italic } /* Comment.PreprocFile */
+body .c1 { color: #408080; font-style: italic } /* Comment.Single */
+body .cs { color: #408080; font-style: italic } /* Comment.Special */
+body .gd { color: #A00000 } /* Generic.Deleted */
+body .ge { font-style: italic } /* Generic.Emph */
+body .gr { color: #FF0000 } /* Generic.Error */
+body .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+body .gi { color: #00A000 } /* Generic.Inserted */
+body .go { color: #888888 } /* Generic.Output */
+body .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+body .gs { font-weight: bold } /* Generic.Strong */
+body .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+body .gt { color: #0044DD } /* Generic.Traceback */
+body .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+body .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+body .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+body .kp { color: #008000 } /* Keyword.Pseudo */
+body .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+body .kt { color: #B00040 } /* Keyword.Type */
+body .m { color: #666666 } /* Literal.Number */
+body .s { color: #BA2121 } /* Literal.String */
+body .na { color: #7D9029 } /* Name.Attribute */
+body .nb { color: #008000 } /* Name.Builtin */
+body .nc { color: #0000FF; font-weight: bold } /* Name.Class */
+body .no { color: #880000 } /* Name.Constant */
+body .nd { color: #AA22FF } /* Name.Decorator */
+body .ni { color: #999999; font-weight: bold } /* Name.Entity */
+body .ne { color: #D2413A; font-weight: bold } /* Name.Exception */
+body .nf { color: #0000FF } /* Name.Function */
+body .nl { color: #A0A000 } /* Name.Label */
+body .nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
+body .nt { color: #008000; font-weight: bold } /* Name.Tag */
+body .nv { color: #19177C } /* Name.Variable */
+body .ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
+body .w { color: #bbbbbb } /* Text.Whitespace */
+body .mb { color: #666666 } /* Literal.Number.Bin */
+body .mf { color: #666666 } /* Literal.Number.Float */
+body .mh { color: #666666 } /* Literal.Number.Hex */
+body .mi { color: #666666 } /* Literal.Number.Integer */
+body .mo { color: #666666 } /* Literal.Number.Oct */
+body .sb { color: #BA2121 } /* Literal.String.Backtick */
+body .sc { color: #BA2121 } /* Literal.String.Char */
+body .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+body .s2 { color: #BA2121 } /* Literal.String.Double */
+body .se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
+body .sh { color: #BA2121 } /* Literal.String.Heredoc */
+body .si { color: #BB6688; font-weight: bold } /* Literal.String.Interpol */
+body .sx { color: #008000 } /* Literal.String.Other */
+body .sr { color: #BB6688 } /* Literal.String.Regex */
+body .s1 { color: #BA2121 } /* Literal.String.Single */
+body .ss { color: #19177C } /* Literal.String.Symbol */
+body .bp { color: #008000 } /* Name.Builtin.Pseudo */
+body .vc { color: #19177C } /* Name.Variable.Class */
+body .vg { color: #19177C } /* Name.Variable.Global */
+body .vi { color: #19177C } /* Name.Variable.Instance */
+body .il { color: #666666 } /* Literal.Number.Integer.Long */
+
+  </style>
+</head>
+<body>
+<h2></h2>
+
+<div class="highlight"><pre><span></span><span class="gh">*** Settings ***</span><span class="p"></span>
+<span class="err">Documentation This suite is a sample to demonstrate list in robot framework</span><span class="p"></span>
+<span class="p">...   </span><span class="s">Current test suite is in space delimited format</span><span class="p"></span>
+<span class="p">...   </span><span class="s">Last line of doc.</span><span class="p"></span>
+<span class="kn">Force Tags</span><span class="p">  </span><span class="s">Demo </span><span class="p"></span>
+<span class="kn">Library</span><span class="p">   </span><span class="nn">OperatingSystem</span><span class="p"></span>
+
+<span class="gh">*** Variables ***</span><span class="p"></span>
+<span class="c"># The host list to ping in loop</span>
+<span class="p">@{</span><span class="nv">hosts</span><span class="p">}    </span><span class="s">www.yahoo.com</span><span class="p">   </span><span class="s">www.google.com</span><span class="p">  </span><span class="s">www.trademe.co.nz</span><span class="p"></span>
+<span class="p">...     </span><span class="s">www.zhihu.com</span><span class="p"></span>
+
+<span class="gh">*** Test Cases ***</span><span class="p"></span>
+<span class="gu">This is a ping test to a list of hosts.</span><span class="p"></span>
+<span class="p">    </span><span class="nf">[Documentation] The Ping Test to hosts.</span><span class="p"></span>
+<span class="p">    [</span><span class="kn">Tags</span><span class="p">]  </span><span class="s">Ping</span><span class="p">  </span><span class="s">CLI</span><span class="p"></span>
+
+<span class="p">    : FOR   ${</span><span class="nv">tgt</span><span class="p">}  IN  @{</span><span class="nv">hosts</span><span class="p">}</span>
+<span class="p">    </span><span class="nf">\ </span><span class="p">${</span><span class="nv">ip</span><span class="p">}</span><span class="nf"> </span><span class="p">${</span><span class="nv">delay</span><span class="p">}    ${</span><span class="nv">edge</span><span class="p">}</span><span class="s">=</span><span class="p">  </span><span class="s">ping_func </span><span class="p">${</span><span class="nv">tgt</span><span class="p">}</span>
+<span class="p">    </span><span class="nf">\ Log \nPing Test Result: IP=</span><span class="p">${</span><span class="nv">ip</span><span class="p">}</span><span class="nf">, Delay=</span><span class="p">${</span><span class="nv">delay</span><span class="p">}</span><span class="nf">ms</span><span class="p">  </span><span class="s">console=True</span><span class="p">  </span><span class="s">html=True</span><span class="p"></span>
+<span class="p">  </span><span class="c"># It shall be &lt;50, however the network at present is not smoothy enough.</span>
+<span class="p">    </span><span class="nf">\ Should Be True</span><span class="p">  ${</span><span class="nv">delay</span><span class="p">}</span><span class="s"> &lt; 200</span><span class="p"></span>
+
+<span class="p">    </span><span class="c"># Print a table into final HTML report.</span>
+<span class="p">    </span><span class="nf">Log</span><span class="p">     </span><span class="s">Printing an HTML table.</span><span class="p"></span>
+<span class="p">    </span><span class="nf">Log</span><span class="p">     </span><span class="s">&lt;table border=&quot;1&quot;&gt; &lt;tr&gt;&lt;td&gt;Cell1&lt;/td&gt;&lt;td&gt;Cell2&lt;/td&gt;&lt;/tr&gt; &lt;/table&gt;</span><span class="p">    </span><span class="s">html=True</span><span class="p"></span>
+
+<span class="gu">The Ping test to a list of IPs.</span><span class="p"></span>
+<span class="p">    </span><span class="nf">[Documentation] The Ping Test to IP addresses.</span><span class="p"></span>
+<span class="p">    [</span><span class="kn">Tags</span><span class="p">]  </span><span class="s">Ping</span><span class="p">  </span><span class="s">CLI @feature=ping</span><span class="p"></span>
+
+<span class="p">    @{</span><span class="nv">vlist</span><span class="p">}</span><span class="nf">= create list 8.8.8.8 8.8.4.4</span><span class="p"></span>
+<span class="p">    : For   ${</span><span class="nv">vip</span><span class="p">}  IN  @{</span><span class="nv">vlist</span><span class="p">}</span>
+<span class="p">    </span><span class="nf">\ </span><span class="p">${</span><span class="nv">ip</span><span class="p">}</span><span class="nf"> </span><span class="p">${</span><span class="nv">delay</span><span class="p">}    ${</span><span class="nv">edege</span><span class="p">}</span><span class="s">=</span><span class="p">  </span><span class="s">ping_func</span><span class="p">  ${</span><span class="nv">vip</span><span class="p">}</span>
+<span class="p">    </span><span class="nf">\ Log \nPing Test Results: delay=</span><span class="p">${</span><span class="nv">delay</span><span class="p">}</span><span class="nf">ms console=True</span><span class="p">  </span><span class="s">html=True</span><span class="p"></span>
+<span class="p">    </span><span class="nf">\ Should be True</span><span class="p">  ${</span><span class="nv">delay</span><span class="p">}</span><span class="s"> &lt; 100</span><span class="p"></span>
+<span class="p">    </span>
+<span class="gh">*** Keywords ***</span><span class="p"></span>
+<span class="gu">ping_func</span><span class="p"></span>
+<span class="p">    [</span><span class="kn">Arguments</span><span class="p">]     ${</span><span class="nv">host</span><span class="p">}</span>
+<span class="p">    [</span><span class="kn">Tags</span><span class="p">]      </span><span class="s">FUNC</span><span class="p">    </span><span class="s">CLI</span><span class="p">     </span><span class="s">Ping</span><span class="p"></span>
+<span class="p">    ${</span><span class="nv">output</span><span class="p">} =     </span><span class="nf">Run</span><span class="p">     </span><span class="s">&quot;pwd&quot;</span><span class="p"></span>
+<span class="p">    </span><span class="c"># The shell cmd works on Mac and Linux.</span>
+<span class="p">    ${</span><span class="nv">result</span><span class="p">} =     </span><span class="nf">Run</span><span class="p">     </span><span class="s">ping -c1 </span><span class="p">${</span><span class="nv">host</span><span class="p">}</span>
+<span class="p">    </span><span class="c"># &quot;Should match regexp&quot; returns the matching part and groups in following.</span>
+<span class="p">    ${</span><span class="nv">match</span><span class="p">}  ${</span><span class="nv">edge</span><span class="p">}     ${</span><span class="nv">ip</span><span class="p">} =    </span><span class="nf">should match regexp</span><span class="p">    ${</span><span class="nv">result</span><span class="p">}</span><span class="s"> PING\\s+(\\S+)\\s*\\((\\d+\\.\\d+\\.\\d+\\.\\d+)\\)</span><span class="p"></span>
+<span class="p">    ${</span><span class="nv">match</span><span class="p">}    ${</span><span class="nv">delay</span><span class="p">} =  </span><span class="nf">should match regexp</span><span class="p">     ${</span><span class="nv">result</span><span class="p">}</span><span class="s"> time=(\\S+)\\s*ms</span><span class="p"></span>
+<span class="p">    [</span><span class="kn">Return</span><span class="p">]  ${</span><span class="nv">ip</span><span class="p">}</span><span class="s"> </span><span class="p">${</span><span class="nv">delay</span><span class="p">}    ${</span><span class="nv">edge</span><span class="p">}</span>
+</pre></div>
+</body>
+</html>

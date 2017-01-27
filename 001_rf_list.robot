@@ -1,6 +1,6 @@
 *** Settings ***
-Documentation	This suite is a sample to demonstrate list in robot framework.
-...		Current test suite is in space delimited format.
+Documentation	This suite is a sample to demonstrate list in robot framework
+...		Current test suite is in space delimited format
 ...		Last line of doc.
 Force Tags	Demo 
 Library		OperatingSystem
