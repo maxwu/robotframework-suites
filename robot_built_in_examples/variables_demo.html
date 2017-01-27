@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+<head>
+  <title></title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <style type="text/css">
+td.linenos { background-color: #f0f0f0; padding-right: 10px; }
+span.lineno { background-color: #f0f0f0; padding: 0 5px 0 5px; }
+pre { line-height: 125%; }
+body .hll { background-color: #ffffcc }
+body  { background: #f8f8f8; }
+body .c { color: #408080; font-style: italic } /* Comment */
+body .err { border: 1px solid #FF0000 } /* Error */
+body .k { color: #008000; font-weight: bold } /* Keyword */
+body .o { color: #666666 } /* Operator */
+body .cm { color: #408080; font-style: italic } /* Comment.Multiline */
+body .cp { color: #BC7A00 } /* Comment.Preproc */
+body .c1 { color: #408080; font-style: italic } /* Comment.Single */
+body .cs { color: #408080; font-style: italic } /* Comment.Special */
+body .gd { color: #A00000 } /* Generic.Deleted */
+body .ge { font-style: italic } /* Generic.Emph */
+body .gr { color: #FF0000 } /* Generic.Error */
+body .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+body .gi { color: #00A000 } /* Generic.Inserted */
+body .go { color: #888888 } /* Generic.Output */
+body .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+body .gs { font-weight: bold } /* Generic.Strong */
+body .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+body .gt { color: #0044DD } /* Generic.Traceback */
+body .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+body .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+body .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+body .kp { color: #008000 } /* Keyword.Pseudo */
+body .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+body .kt { color: #B00040 } /* Keyword.Type */
+body .m { color: #666666 } /* Literal.Number */
+body .s { color: #BA2121 } /* Literal.String */
+body .na { color: #7D9029 } /* Name.Attribute */
+body .nb { color: #008000 } /* Name.Builtin */
+body .nc { color: #0000FF; font-weight: bold } /* Name.Class */
+body .no { color: #880000 } /* Name.Constant */
+body .nd { color: #AA22FF } /* Name.Decorator */
+body .ni { color: #999999; font-weight: bold } /* Name.Entity */
+body .ne { color: #D2413A; font-weight: bold } /* Name.Exception */
+body .nf { color: #0000FF } /* Name.Function */
+body .nl { color: #A0A000 } /* Name.Label */
+body .nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
+body .nt { color: #008000; font-weight: bold } /* Name.Tag */
+body .nv { color: #19177C } /* Name.Variable */
+body .ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
+body .w { color: #bbbbbb } /* Text.Whitespace */
+body .mb { color: #666666 } /* Literal.Number.Bin */
+body .mf { color: #666666 } /* Literal.Number.Float */
+body .mh { color: #666666 } /* Literal.Number.Hex */
+body .mi { color: #666666 } /* Literal.Number.Integer */
+body .mo { color: #666666 } /* Literal.Number.Oct */
+body .sb { color: #BA2121 } /* Literal.String.Backtick */
+body .sc { color: #BA2121 } /* Literal.String.Char */
+body .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+body .s2 { color: #BA2121 } /* Literal.String.Double */
+body .se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
+body .sh { color: #BA2121 } /* Literal.String.Heredoc */
+body .si { color: #BB6688; font-weight: bold } /* Literal.String.Interpol */
+body .sx { color: #008000 } /* Literal.String.Other */
+body .sr { color: #BB6688 } /* Literal.String.Regex */
+body .s1 { color: #BA2121 } /* Literal.String.Single */
+body .ss { color: #19177C } /* Literal.String.Symbol */
+body .bp { color: #008000 } /* Name.Builtin.Pseudo */
+body .vc { color: #19177C } /* Name.Variable.Class */
+body .vg { color: #19177C } /* Name.Variable.Global */
+body .vi { color: #19177C } /* Name.Variable.Instance */
+body .il { color: #666666 } /* Literal.Number.Integer.Long */
+
+  </style>
+</head>
+<body>
+<h2></h2>
+
+<div class="highlight"><pre><span class="gh">*** Settings ***</span><span class="p"></span>
+<span class="kn">Documentation</span><span class="p">     </span><span class="s">robot built-in keywords demo</span><span class="p"></span>
+<span class="kn">Force Tags</span><span class="p">        </span><span class="s">robot built-in</span><span class="p"></span>
+<span class="kn">Library</span><span class="p">           </span><span class="nn">Collections</span><span class="p"></span>
+
+<span class="gh">*** Test Cases ***</span><span class="p"></span>
+<span class="gu">list demo</span><span class="p"></span>
+<span class="p">    [</span><span class="kn">Documentation</span><span class="p">]    </span><span class="s">list demo</span><span class="p"></span>
+<span class="p">    @{</span><span class="nv">my_list</span><span class="p">}    </span><span class="nf">create list</span><span class="p">    </span><span class="s">1</span><span class="p">    </span><span class="s">2</span><span class="p">    </span><span class="s">3</span><span class="p">    </span><span class="s">a</span><span class="p">    </span><span class="s">b</span><span class="p"></span>
+<span class="p">    ...    </span><span class="s">c</span><span class="p"></span>
+<span class="p">    </span><span class="c"># you can fetch the element with &#39;@&#39; or &#39;$&#39;</span>
+<span class="p">    </span><span class="nf">should be equal</span><span class="p">    @{</span><span class="nv">my_list</span><span class="p">}[</span><span class="nv">0</span><span class="p">]    </span><span class="s">1</span><span class="p"></span>
+<span class="p">    </span><span class="nf">should be equal</span><span class="p">    ${</span><span class="nv">my_list[0]</span><span class="p">}    </span><span class="s">1</span><span class="p"></span>
+<span class="p">    </span><span class="nf">should be equal</span><span class="p">    @{</span><span class="nv">my_list</span><span class="p">}[</span><span class="nv">1</span><span class="p">]    </span><span class="s">2</span><span class="p"></span>
+<span class="p">    </span><span class="nf">should be equal</span><span class="p">    ${</span><span class="nv">my_list[1]</span><span class="p">}    </span><span class="s">2</span><span class="p"></span>
+<span class="p">    </span><span class="c">#traverse the list</span>
+<span class="p">    : FOR    ${</span><span class="nv">item</span><span class="p">}    IN    @{</span><span class="nv">my_list</span><span class="p">}</span>
+<span class="p">    \    </span><span class="nf">log</span><span class="p">    ${</span><span class="nv">item</span><span class="p">}</span>
+<span class="p">    </span><span class="c">#traverse the list</span>
+<span class="p">    ${</span><span class="nv">len</span><span class="p">}    </span><span class="nf">Get Length</span><span class="p">    ${</span><span class="nv">my_list</span><span class="p">}</span>
+<span class="p">    : FOR    ${</span><span class="nv">i</span><span class="p">}    IN RANGE    ${</span><span class="nv">len</span><span class="p">}</span>
+<span class="p">    \    </span><span class="nf">should be equal</span><span class="p">    ${</span><span class="nv">my_list[</span><span class="p">${</span><span class="nv">i</span><span class="p">}</span><span class="nv">]</span><span class="p">}    @{</span><span class="nv">my_list</span><span class="p">}[${</span><span class="nv">i</span><span class="p">}]</span>
+<span class="p">    </span><span class="nf">print_all_args</span><span class="p">    @{</span><span class="nv">my_list</span><span class="p">}</span>
+<span class="p">    </span><span class="nf">print_all_args</span><span class="p">    </span><span class="s">1</span><span class="p">    </span><span class="s">2</span><span class="p">    </span><span class="s">3</span><span class="p"></span>
+<span class="p">    </span><span class="nf">log</span><span class="p">    ${</span><span class="nv">my_list</span><span class="p">}</span>
+
+<span class="gu">dict demo</span><span class="p"></span>
+<span class="p">    [</span><span class="kn">Documentation</span><span class="p">]    </span><span class="s">dict demo</span><span class="p"></span>
+<span class="p">    </span><span class="nf">&amp;{my_dict}</span><span class="p">    </span><span class="s">Create Dictionary</span><span class="p">    </span><span class="s">key=val</span><span class="p">    </span><span class="s">foo=bar</span><span class="p">    </span><span class="s">1=2</span><span class="p">    ${</span><span class="nv">1</span><span class="p">}</span><span class="s">=</span><span class="p">${</span><span class="nv">2</span><span class="p">}</span>
+<span class="p">    </span><span class="nf">log</span><span class="p">    ${</span><span class="nv">my_dict</span><span class="p">}</span>
+<span class="p">    </span><span class="nf">should be equal</span><span class="p">    </span><span class="s">&amp;{my_dict}[1]</span><span class="p">    </span><span class="s">2</span><span class="p"></span>
+<span class="p">    </span><span class="nf">should be equal</span><span class="p">    </span><span class="s">&amp;{my_dict}[</span><span class="p">${</span><span class="nv">1</span><span class="p">}</span><span class="s">]</span><span class="p">    ${</span><span class="nv">2</span><span class="p">}</span>
+<span class="p">    </span><span class="nf">&amp;{my_dict_no_int}</span><span class="p">    </span><span class="s">Create Dictionary</span><span class="p">    </span><span class="s">key=val</span><span class="p">    </span><span class="s">foo=bar</span><span class="p">    </span><span class="s">1=2</span><span class="p"></span>
+<span class="p">    </span><span class="nf">print_all_args</span><span class="p">    </span><span class="s">&amp;{my_dict_no_int}</span><span class="p"></span>
+
+<span class="gu">string and integervariables</span><span class="p"></span>
+<span class="p">    [</span><span class="kn">Documentation</span><span class="p">]    </span><span class="s">This demo shows how to define string and integer variable</span><span class="p"></span>
+<span class="p">    ${</span><span class="nv">str_var</span><span class="p">}    </span><span class="nf">set variable</span><span class="p">    </span><span class="s">1024</span><span class="p"></span>
+<span class="p">    ${</span><span class="nv">int_var</span><span class="p">}    </span><span class="nf">set variable</span><span class="p">    ${</span><span class="nv">1024</span><span class="p">}</span>
+<span class="p">    </span><span class="nf">log</span><span class="p">    ${</span><span class="nv">str_var</span><span class="p">}</span>
+<span class="p">    </span><span class="nf">log</span><span class="p">    ${</span><span class="nv">int_var</span><span class="p">}</span>
+<span class="p">    </span><span class="c">#this list contains 2 element &#39;1024&#39; and 1024</span>
+<span class="p">    @{</span><span class="nv">my_list</span><span class="p">}    </span><span class="nf">create list</span><span class="p">    </span><span class="s">1024</span><span class="p">    ${</span><span class="nv">1024</span><span class="p">}</span>
+<span class="p">    </span><span class="nf">log</span><span class="p">    ${</span><span class="nv">my_list</span><span class="p">}</span>
+
+<span class="gu">environment variables</span><span class="p"></span>
+<span class="p">    [</span><span class="kn">Documentation</span><span class="p">]    </span><span class="s">This demo shows how to get environment variables</span><span class="p"></span>
+<span class="p">    </span><span class="nf">log</span><span class="p">    %{</span><span class="nv">PATH</span><span class="p">}</span>
+<span class="p">    ${</span><span class="nv">my_path</span><span class="p">}    </span><span class="nf">set variable</span><span class="p">    %{</span><span class="nv">PATH</span><span class="p">}</span>
+<span class="p">    </span><span class="nf">should contain</span><span class="p">    ${</span><span class="nv">my_path</span><span class="p">}    </span><span class="s">bin</span><span class="p"></span>
+<span class="p">    </span><span class="nf">should match regexp</span><span class="p">    ${</span><span class="nv">my_path</span><span class="p">}    </span><span class="s">[\\S]+:</span><span class="p"></span>
+
+<span class="gh">*** Keywords ***</span><span class="p"></span>
+<span class="gu">print_all_args</span><span class="p"></span>
+<span class="p">    [</span><span class="kn">Arguments</span><span class="p">]    @{</span><span class="nv">args</span><span class="p">}    </span><span class="s">&amp;{kwargs}</span><span class="p"></span>
+<span class="p">    [</span><span class="kn">Documentation</span><span class="p">]    </span><span class="s">This keyword shows how to define keyword that takes varargs and kwargs.</span><span class="p"></span>
+<span class="p">    </span><span class="nf">log</span><span class="p">    </span><span class="s">list args:</span><span class="p"></span>
+<span class="p">    : FOR    ${</span><span class="nv">item</span><span class="p">}    IN    @{</span><span class="nv">args</span><span class="p">}</span>
+<span class="p">    \    </span><span class="nf">log</span><span class="p">    ${</span><span class="nv">item</span><span class="p">}</span>
+<span class="p">    @{</span><span class="nv">keys</span><span class="p">}    </span><span class="nf">Get Dictionary keys</span><span class="p">    ${</span><span class="nv">kwargs</span><span class="p">}</span>
+<span class="p">    </span><span class="nf">log</span><span class="p">    </span><span class="s">dict args:</span><span class="p"></span>
+<span class="p">    : FOR    ${</span><span class="nv">item</span><span class="p">}    IN    @{</span><span class="nv">keys</span><span class="p">}</span>
+<span class="p">    \    </span><span class="nf">log</span><span class="p">    ${</span><span class="nv">item</span><span class="p">}</span><span class="s"> : &amp;{kwargs}[</span><span class="p">${</span><span class="nv">item</span><span class="p">}</span><span class="s">]</span><span class="p"></span>
+</pre></div>
+</body>
+</html>
